@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Event | DevOps External</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-container">
+    <header class="site-header">
+      <div class="badge">Lab Project 15</div>
+      <span class="header-tag">Selenium QA &amp; Kubernetes</span>
+    </header>
+
+    <main class="main-card">
+      <div class="card-header">
+        <div class="header-top">
+          <div class="pill-indicator">
+            <span class="status-dot"></span>
+            <span>Event Listener Ready</span>
+          </div>
+          <div class="counter-badge">
+            Clicks: <strong id="click-count" data-testid="click-count">0</strong>
+          </div>
+        </div>
+        <h1 id="page-title">Interactive Button Click Event</h1>
+        <p class="subtitle">Demonstrating JavaScript event handling, automated Selenium alert dialog verification, and Kubernetes container deployment.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="card-content">
+        <!-- Main Interactive Button Action Section -->
+        <div class="action-card">
+          <div class="action-header">
+            <span class="action-label">User Action Trigger</span>
+            <span class="action-tip">Triggers browser window.alert()</span>
+          </div>
+
+          <div class="custom-msg-input-wrap">
+            <input 
+              type="text" 
+              id="alert-message-input" 
+              class="input-field" 
+              value="DevOps Event Triggered: Button was clicked successfully!"
+              placeholder="Enter custom alert message..."
+            >
+          </div>
+
+          <div class="button-row">
+            <button 
+              id="alert-button" 
+              data-testid="alert-button" 
+              class="btn btn-primary btn-large" 
+              onclick="handleButtonClick()"
+            >
+              Click Me to Display Alert
+            </button>
+            <button 
+              id="reset-button" 
+              data-testid="reset-button" 
+              class="btn btn-outline" 
+              onclick="resetClickCount()"
+            >
+              Reset Counter
+            </button>
+          </div>
+        </div>
+
+        <!-- Status & Event Log Display -->
+        <div class="status-panel">
+          <div class="status-header">
+            <span class="panel-label">Event Telemetry Log</span>
+            <span id="last-clicked-time" class="last-time">Last Clicked: None</span>
+          </div>
+          <ul id="event-log-list" class="log-list">
+            <li class="empty-log">Awaiting first click event...</li>
+          </ul>
+        </div>
+
+        <!-- Infrastructure & Testing Metadata -->
+        <div class="meta-box">
+          <div class="meta-title">DevOps Deployment &amp; Testing Stack</div>
+          <div class="meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Testing Framework</span>
+              <span class="meta-val">Selenium WebDriver (Chrome)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Alert Handler</span>
+              <span class="meta-val">driver.switch_to.alert</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Orchestration</span>
+              <span class="meta-val">Kubernetes (K8s Service)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Target Port</span>
+              <span class="meta-val">NodePort 30015</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <span>Question 15.a &amp; 15.b &bull; Selenium Testing &bull; Kubernetes</span>
+        <span class="monospace-tag" id="dom-status">Status: Active</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Python / Selenium
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+test-reports/
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
